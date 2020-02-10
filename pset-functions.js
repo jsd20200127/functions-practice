@@ -51,35 +51,103 @@ console.log('-----------------')
 
 /***********
 
-Problem: Phone Number Cleaner
+Problem: Random Number Generator
 
-Your task is to clean up differently formatted telephone numbers by removing punctuation and the country code (1) if present.
+Create a function that accepts an "upToNumber" as a parameter that generates a random number from 1 to the specifed "upToNumber"
 
-Create a function that accepts a formatted "phoneNumber" and removes all punctuation and an leading (1) if present
+
+Test Cases:
+Use the following test cases to confirm your program meets the success criteria
+
+1. randomNumber(100)
+
+   Expected Result: a random number (integer)  from 1 to 100
+
+2. randomNumber(25)
+
+   Expected Result: a random number (integer) from 1 to 25
+
+3. randomNumber(1500)
+
+   Expected Result: a random number (integer) from 1 to 1500
+
+************/
+console.log('Problem 2:')
+
+// Add your code below this line
+
+// Add your code above this line
+
+/** added for formatting purposes **/
+console.log('')
+console.log('-----------------')
+
+/***********
+Problem: Odd Number Checker
+
+
+Create a function that accepts a "number" as a parameter and returns true if the number is an odd number and false if the number is an even number
 
 Feel free to add any additional functions or variables you deem necessary to meet the above requirements
 
 Test Cases:
 Use the following test cases to confirm your program meets the success criteria
 
-1. phoneNumberCleaner("+1 (613)-995-0253")
+1. isOdd(3)
 
-   Expected Result: 6139950253
+   Expected Result: true
 
-2. phoneNumberCleaner("613-995-0253")
+2. isOdd(20)
 
-   Expected Result: 6139950253
+   Expected Result: false
 
-3. phoneNumberCleaner("1 613 995 0253")
+3. isOdd(10001)
 
-   Expected Result: 6139950253
-
-4. phoneNumberCleaner("613.995.0253")
-
-   Expected Result: 6139950253
+   Expected Result: true
 
 ************/
-console.log('Problem 2:')
+console.log('Problem 3:')
+
+// Add your code below this line
+
+// Add your code above this line
+
+/** added for formatting purposes **/
+console.log('')
+console.log('-----------------')
+
+/***********
+Problem: Nucleotide Count
+
+The genetic language of every living thing on the planet is DNA. DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides. 4 types exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' thymine.
+
+Given a single stranded DNA string, compute how many times each nucleotide occurs in the string.
+
+Create a function that accepts "dna" (string) and calculates how many times each nucleotide occurs in the string
+
+Feel free to add any additional functions or variables you deem necessary to meet the above requirements
+
+Test Cases:
+Use the following test cases to confirm your program meets the success criteria
+
+1. nucleotideCount("GGGGGTAACCCGG")
+
+   Expected Result: { 'A': 2, 'T': 1, 'C': 3, 'G': 7 }
+
+2. nucleotideCount("'GGGGGGGG'")
+
+   Expected Result: { 'A': 0, 'T': 0, 'C': 0, 'G': 8 }
+
+3. nucleotideCount("CGATTGGG")
+
+   Expected Result: { 'A': 1, 'T': 2, 'C': 1, 'G': 4 }
+
+4. nucleotideCount("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")
+
+   Expected Result: { 'A': 20, 'T': 21, 'C': 17, 'G': 12 }
+
+************/
+console.log('Problem 4:')
 
 // Add your code below this line
 
@@ -118,53 +186,9 @@ Use the following test cases to confirm your program meets the success criteria
    Expected Result: 24
 
 ************/
-console.log('Problem 3:')
+console.log('Problem 5 (challenge):')
 
 // Add your code below this line
-
-// Add your code above this line
-
-/** added for formatting purposes **/
-console.log('')
-console.log('-----------------')
-
-/***********
-Tags: functions
-
-Problem: Nucleotide Count
-
-The genetic language of every living thing on the planet is DNA. DNA is a large molecule that is built from an extremely long sequence of individual elements called nucleotides. 4 types exist in DNA and these differ only slightly and can be represented as the following symbols: 'A' for adenine, 'C' for cytosine, 'G' for guanine, and 'T' thymine.
-
-Given a single stranded DNA string, compute how many times each nucleotide occurs in the string.
-
-Create a function that accepts "dna" (string) and calculates how many times each nucleotide occurs in the string
-
-Feel free to add any additional functions or variables you deem necessary to meet the above requirements
-
-Test Cases:
-Use the following test cases to confirm your program meets the success criteria
-
-1. nucleotideCount("GGGGGTAACCCGG")
-
-   Expected Result: { 'A': 2, 'T': 1, 'C': 3, 'G': 7 }
-
-2. nucleotideCount("'GGGGGGGG'")
-
-   Expected Result: { 'A': 0, 'T': 0, 'C': 0, 'G': 8 }
-
-3. nucleotideCount("CGATTGGG")
-
-   Expected Result: { 'A': 1, 'T': 2, 'C': 1, 'G': 4 }
-
-4. nucleotideCount("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC")
-
-   Expected Result: { 'A': 20, 'T': 21, 'C': 17, 'G': 12 }
-
-************/
-console.log('Problem 4:')
-
-// Add your code below this line
-
 // Add your code above this line
 
 /** added for formatting purposes **/
