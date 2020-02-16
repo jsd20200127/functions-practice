@@ -43,6 +43,30 @@ console.log('Problem 1:')
 
 // Add your code below this line
 
+// type of triangle function
+function typeOfTriangle(s1, s2, s3) {
+
+  if (s1 <= 0 || s2 <= 0 || s3 <= 0) {
+    // any sides <= 0? not a triangle
+    console.log("not a triangle")
+  } else if (s1 === s2 && s1 === s3) {
+    // equal sides? thats a equilateral
+    console.log("equilateral")
+  } else if (s1 === s2 && s1 !== s3 || s1 === s3 && s1 !== s2) {
+    // one side different than the other two, that's isosceles
+    console.log("isosceles")
+  } else {
+    // anything else? scalene bro
+    console.log("scalene")
+  }
+}
+
+// check our work
+typeOfTriangle(4, 4, 4)
+typeOfTriangle(0, 4, 7)
+typeOfTriangle(9, 8, 9)
+typeOfTriangle(12, 8, 7)
+
 // Add your code above this line
 
 /** added for formatting purposes **/
@@ -75,6 +99,23 @@ Use the following test cases to confirm your program meets the success criteria
 console.log('Problem 2:')
 
 // Add your code below this line
+// random number generator based on instructions
+function randomNumber(upToNumber) {
+  console.log(Math.floor(Math.random() * upToNumber + 1))
+}
+
+// working this out with smaller numbers
+// really be hard to prove test cases without some distribution catcher
+randomNumber(5)
+randomNumber(5)
+randomNumber(5)
+randomNumber(5)
+randomNumber(5)
+randomNumber(5)
+randomNumber(5)
+randomNumber(5)
+randomNumber(5)
+randomNumber(5)
 
 // Add your code above this line
 
@@ -110,6 +151,19 @@ console.log('Problem 3:')
 
 // Add your code below this line
 
+// odd number determiner
+function isOdd(number) {
+  if (number % 2 !== 0) {
+    console.log("true")
+  } else {
+    console.log("false")
+  }
+}
+
+// checking our work with the test cases
+isOdd(3)
+isOdd(20)
+isOdd(10001)
 // Add your code above this line
 
 /** added for formatting purposes **/
@@ -150,7 +204,28 @@ Use the following test cases to confirm your program meets the success criteria
 console.log('Problem 4:')
 
 // Add your code below this line
+function nucleotideCount(dnaStrand) {
+  // breaking up string and creating placeholder array
+  const letterArray = dnaStrand.split('')
+  const letterCount = {}
 
+  // logic for counting letters
+  for (let i = 0; i < letterArray.length; i++) {
+    letter = letterArray[i]
+    if (letterCount[letter] === undefined) {
+      letterCount[letter] = 1
+    } else {
+      letterCount[letter] += 1
+    }
+  }
+return letterCount
+}
+
+// testing work with cases
+console.log(nucleotideCount("GGGGGTAACCCGG"))
+console.log(nucleotideCount("GGGGGGGG"))
+console.log(nucleotideCount("CGATTGGG"))
+console.log(nucleotideCount("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"))
 // Add your code above this line
 
 /** added for formatting purposes **/
@@ -183,12 +258,35 @@ Use the following test cases to confirm your program meets the success criteria
 
 4. wordyMath("What is 25 divided by 5?")
 
-   Expected Result: 24
+   Expected Result: 24 << shouldn't this be 5?
 
 ************/
 console.log('Problem 5 (challenge):')
 
 // Add your code below this line
+function wordyMath (question) {
+  // break up single string
+  const wordArray = question.split(' ')
+
+  // look for math sign and if present, do it and return
+  if (wordArray.includes('multiplied')) {
+    return parseFloat(wordArray[2]) * parseFloat(wordArray[5])
+  } else if (wordArray.includes('divided')) {
+    return parseFloat(wordArray[2]) / parseFloat(wordArray[5])
+  } else if (wordArray.includes('plus')) {
+    return parseFloat(wordArray[2]) + parseFloat(wordArray[4])
+  } else if (wordArray.includes('minus')) {
+    return parseFloat(wordArray[2]) - parseFloat(wordArray[4])
+  } else {
+    console.log('math sign not found')
+  }
+}
+
+// testing work with cases
+console.log(wordyMath("What is 5 plus 13?"))
+console.log(wordyMath("What is 7 minus 5?"))
+console.log(wordyMath("What is 6 multiplied by 4?"))
+console.log(wordyMath("What is 25 divided by 5?"))
 // Add your code above this line
 
 /** added for formatting purposes **/
