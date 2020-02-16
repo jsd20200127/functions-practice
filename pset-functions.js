@@ -43,6 +43,40 @@ console.log('Problem 1:')
 
 // Add your code below this line
 
+function isEquilateral(s1,s2,s3) {
+	if ((s1===s2) && (s1===s3)) {
+		return true
+	} else {
+		return false	
+	}
+}
+
+function isIsoceles(s1,s2,s3) {
+	if ((s1===s2) || (s1===s3) || (s2===s3)) {
+		return true
+	} else {
+		return false
+	}
+}
+
+function typeOfTriangle(s1,s2,s3) {
+	if ((s1<=0) || (s2<=0) || (s3<=0)) {
+		return "Not a triangle!"
+	} else if (((s1+s2)<=s3) || ((s2+s3)<=s1) || ((s3+s1)<=s2)) {
+		return "Not a triangle!"
+	} else {	
+		if (isEquilateral(s1,s2,s3)) {
+			return "Equilateral!"
+		} else if (isIsoceles(s1,s2,s3)) {
+			return "Isoceles!"
+		} else {
+			return "Scalene!"
+		}		
+	}
+}
+
+console.log(typeOfTriangle(2, 9, 7))
+
 // Add your code above this line
 
 /** added for formatting purposes **/
@@ -75,6 +109,12 @@ Use the following test cases to confirm your program meets the success criteria
 console.log('Problem 2:')
 
 // Add your code below this line
+
+function randomNumber(max) {
+	return Math.floor(Math.random() * max)
+}
+
+console.log(randomNumber(1500))
 
 // Add your code above this line
 
@@ -109,6 +149,12 @@ Use the following test cases to confirm your program meets the success criteria
 console.log('Problem 3:')
 
 // Add your code below this line
+
+function isOdd(number) {
+	return (number % 2 === 0) ? true : false
+}
+
+console.log(isOdd(20))
 
 // Add your code above this line
 
@@ -151,6 +197,38 @@ console.log('Problem 4:')
 
 // Add your code below this line
 
+dna_string = "CGATTGGG"
+
+function count_nucleotide(string) {
+	let a_count = 0
+	let t_count = 0
+	let c_count = 0
+	let g_count = 0
+
+	for (i=0; i<string.length; i++ ) {
+		switch (string.charAt(i)) {
+		case "A": 
+			a_count++;
+			break;
+		case 'T':
+			t_count++;
+			break;
+		case 'C':
+			c_count++;
+			break;
+		case 'G':
+			g_count++;
+			break;
+		default:
+			break;
+		}
+	}
+
+	return ('A:' + a_count + ', T:' + t_count + ', C:' + c_count + ', G:' + g_count)
+}
+
+console.log(count_nucleotide(dna_string))
+
 // Add your code above this line
 
 /** added for formatting purposes **/
@@ -183,12 +261,49 @@ Use the following test cases to confirm your program meets the success criteria
 
 4. wordyMath("What is 25 divided by 5?")
 
-   Expected Result: 24
+   Expected Result: 5
 
 ************/
 console.log('Problem 5 (challenge):')
 
 // Add your code below this line
+
+let input = "What is 5 plus 13?"
+
+function findNumbersInString(string) {
+	// let numbers = []
+	// let words = string.split(" ")
+	// for (i=0; i<words.length; i++) {
+	// 	if (!isNaN(words[i])) {
+	// 		numbers.push(words[i])
+	// 	} 
+	// }
+	let numbers = string.match(/\d+/g)
+	console.log(numbers)
+	return numbers
+}
+
+function wordyMath(string) {
+	numbers = findNumbersInString(string)
+	if (numbers.length > 2) {
+		return 'Out of scope.'
+	} else {
+		if (string.includes("plus")) {
+			return (parseInt(numbers[0]) + parseInt(numbers[1]))
+		} else if (string.includes("minus")) {
+			return (numbers[0] - numbers[1])
+		} else if (string.includes("multiplied by")) {
+			return (numbers[0] * numbers[1])
+		} else if (string.includes("divided by")) {
+			return (numbers[0] / numbers[1])
+		} else {
+			return 'Out of scope.'
+		}
+	}
+}
+
+console.log(wordyMath(input))
+
 // Add your code above this line
 
 /** added for formatting purposes **/
